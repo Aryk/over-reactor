@@ -1,9 +1,24 @@
-import { IStars, IStarsAction } from '../../../models/stars';
+/** Action Interface */
+export interface IStarsAction {
+  type: string;
+  payload?: {
+    count?: number;
+    message?: any;
+  };
+}
 
 /** Action Types */
 export const GET_REQUEST: string = 'stars/GET_REQUEST';
 export const GET_SUCCESS: string = 'stars/GET_SUCCESS';
 export const GET_FAILURE: string = 'stars/GET_FAILURE';
+
+/** State Interface */
+export interface IStars {
+  isFetching?: boolean;
+  count?: number;
+  error?: boolean;
+  message?: any;
+}
 
 /** Initial State */
 const initialState: IStars = {
