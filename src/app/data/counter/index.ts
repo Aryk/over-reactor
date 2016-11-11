@@ -1,16 +1,17 @@
+/** Action Types */
+export const INCREMENT: string = 'counter/INCREMENT';
+export const DECREMENT: string = 'counter/DECREMENT';
+
 /** Action Interface */
 export interface ICounterAction {
   type: string;
 }
 
-/** Action Types */
-export const INCREMENT: string = 'counter/INCREMENT';
-export const DECREMENT: string = 'counter/DECREMENT';
-
 /** State Interface */
 export interface ICounter {
   count: number;
 }
+
 /** Initial State  */
 const initialState: ICounter = {
   count: 0,

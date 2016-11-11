@@ -1,3 +1,8 @@
+/** Action Types */
+export const GET_REQUEST: string = 'stars/GET_REQUEST';
+export const GET_SUCCESS: string = 'stars/GET_SUCCESS';
+export const GET_FAILURE: string = 'stars/GET_FAILURE';
+
 /** Action Interface */
 export interface IStarsAction {
   type: string;
@@ -6,11 +11,6 @@ export interface IStarsAction {
     message?: any;
   };
 }
-
-/** Action Types */
-export const GET_REQUEST: string = 'stars/GET_REQUEST';
-export const GET_SUCCESS: string = 'stars/GET_SUCCESS';
-export const GET_FAILURE: string = 'stars/GET_FAILURE';
 
 /** State Interface */
 export interface IStars {
