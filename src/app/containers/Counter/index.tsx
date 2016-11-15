@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ICounter, ICounterAction, increment, decrement }  from '../../data/counter';
+import { ICounter, ICounterAction, increment, decrement }  from '../../redux/modules/counter';
 const { connect } = require('react-redux');
 const s = require('./style.css');
 

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { fetchMock, mockStore } from '../../helpers/TestHelper.tsx';
+import { fetchMock, mockStore } from '../../../helpers/TestHelper.tsx';
 import * as stars from './';
 
 /** Mock Data */
@@ -26,7 +26,7 @@ describe('Stars Module', () => {
       /** 200 */
       it('dispatches Request and Success Actions on OK requests', (done) => {
 
-        fetchMock.mock('https://api.github.com/repos/barbar/vortigern', {
+        fetchMock.mock('https://api.github.com/repos/Aryk/over-reactor', {
           status: 200,
           body: githubResponse,
         });
@@ -47,7 +47,7 @@ describe('Stars Module', () => {
       /** 400 */
       it('dispatches Failure on failed requests', (done) => {
 
-        fetchMock.mock('https://api.github.com/repos/barbar/vortigern', {
+        fetchMock.mock('https://api.github.com/repos/Aryk/over-reactor', {
           status: 400,
           body: errResponse,
         });

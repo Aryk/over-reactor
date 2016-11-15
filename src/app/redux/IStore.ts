@@ -1,5 +1,5 @@
-import { ICounter } from '../data/counter';
-import { IStars } from '../data/stars';
+import { ICounter } from './modules/counter';
+import { IStars } from './modules/stars';
 
 export interface IStore {
   counter: ICounter;

@@ -56,7 +56,7 @@ export function getStars() {
   return dispatch => {
     dispatch(starsRequest());
 
-    return fetch('https://api.github.com/repos/barbar/vortigern')
+    return fetch('https://api.github.com/repos/Aryk/over-reactor')
       .then(res => {
         if (res.ok) {
           return res.json()
