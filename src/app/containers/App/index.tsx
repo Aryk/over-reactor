@@ -9,7 +9,7 @@ class App extends React.Component<any, any> {
 
     return (
       <section className={s.appContainer}>
-        <Helmet {...appConfig.app} {...appConfig.app.head}/>
+        <Helmet {...appConfig.app.head}/>
         <Header />
         {this.props.children}
       </section>
