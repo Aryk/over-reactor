@@ -15,7 +15,10 @@ var config = {
   },
 
   entry: {
-    app: './src/client.tsx',
+    app: [
+      'bootstrap-sass!./config/bootstrap/prod.js',
+      './src/client.tsx'
+    ],
     vendor: [
       './src/vendor/main.ts',
       'react',
@@ -71,6 +74,22 @@ var config = {
         loader: ExtractTextPlugin.extract(
           'style-loader',
           'css-loader'
+        )
+      },
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?modules&importLoaders=2&sourceMap',
+          'less-loader?outputStyle=expanded&sourceMap=true&sourceMapContents=true'
+        )
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?modules&importLoaders=2&sourceMap',
+          'sass-loader?outputStyle=expanded&sourceMap=true&sourceMapContents=true'
         )
       },
       {

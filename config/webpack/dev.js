@@ -19,6 +19,7 @@ var config = {
   entry: {
     app: [
       'webpack-hot-middleware/client?reload=true',
+      'bootstrap-sass!./config/bootstrap/dev.js',
       './src/client.tsx',
       './src/vendor/main.ts'
     ]
@@ -66,6 +67,23 @@ var config = {
         loaders: [
           'style-loader',
           'css-loader'
+        ]
+      },
+      {
+        test: /\.less$/,
+        loader: [
+          'style-loader',
+          'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]',
+          'less-loader?outputStyle=expanded&sourceMap'
+        ]
+      },
+      {
+        test: /\.scss$/,
+        loader: [
+          'style-loader',
+          'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]',
+          'postcss-loader',
+          'sass-loader?outputStyle=expanded&sourceMap'
         ]
       },
       {
