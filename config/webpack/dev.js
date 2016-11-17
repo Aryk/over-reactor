@@ -58,7 +58,8 @@ var config = {
         loaders: [
           'style-loader',
           'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]',
-          'postcss-loader'
+          'postcss-loader',
+          'autoprefixer-loader?browsers=last 2 version'
         ]
       },
       {
@@ -66,7 +67,8 @@ var config = {
         exclude: path.resolve('./src/app'),
         loaders: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'autoprefixer-loader?browsers=last 2 version'
         ]
       },
       {
@@ -74,6 +76,7 @@ var config = {
         loader: [
           'style-loader',
           'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]',
+          'autoprefixer-loader?browsers=last 2 version',
           'less-loader?outputStyle=expanded&sourceMap'
         ]
       },
@@ -82,6 +85,7 @@ var config = {
         loader: [
           'style-loader',
           'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]',
+          'autoprefixer-loader?browsers=last 2 version',
           'postcss-loader',
           'sass-loader?outputStyle=expanded&sourceMap'
         ]

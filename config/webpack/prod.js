@@ -65,6 +65,7 @@ var config = {
         loader: ExtractTextPlugin.extract(
           'style-loader',
           'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]',
+          'autoprefixer-loader?browsers=last 2 version',
           'postcss-loader'
         )
       },
@@ -73,7 +74,8 @@ var config = {
         exclude: path.resolve('./src/app'),
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'autoprefixer-loader?browsers=last 2 version'
         )
       },
       {
@@ -81,6 +83,7 @@ var config = {
         loader: ExtractTextPlugin.extract(
           'style-loader',
           'css-loader?modules&importLoaders=2&sourceMap',
+          'autoprefixer-loader?browsers=last 2 version',
           'less-loader?outputStyle=expanded&sourceMap=true&sourceMapContents=true'
         )
       },
@@ -89,6 +92,7 @@ var config = {
         loader: ExtractTextPlugin.extract(
           'style-loader',
           'css-loader?modules&importLoaders=2&sourceMap',
+          'autoprefixer-loader?browsers=last 2 version',
           'sass-loader?outputStyle=expanded&sourceMap=true&sourceMapContents=true'
         )
       },

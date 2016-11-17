@@ -86,6 +86,7 @@
     "@types/source-map": "^0.1.29",
     "@types/uglify-js": "^2.6.28",
     "@types/webpack": "^1.12.35",
+    "autoprefixer-loader": "^3.1.0",
     "bootstrap-sass": "^3.3.5",
     "bootstrap-sass-loader": "^1.0.9",
     "babel-core": "^6.17.0",
