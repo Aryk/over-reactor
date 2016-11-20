@@ -8,8 +8,8 @@
   padding-left: 50px;
 }
 
-.navbar-default .navbar-nav a.active,
-.navbar-default .navbar-nav a.active:hover,
-.navbar-default .navbar-nav a.active:focus {
+.navbar-default .navbar-nav li.active a,
+.navbar-default .navbar-nav li.active a:hover,
+.navbar-default .navbar-nav li.active a:focus {
   color: $brand-primary;
 }

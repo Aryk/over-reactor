@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Link } from 'react-router';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 
 class Header extends React.Component<any, any> {
   public render() {
@@ -10,16 +10,14 @@ class Header extends React.Component<any, any> {
     return (
       <Navbar>
         <Navbar.Header>
-          <Navbar.Brand>
-            <Link to="/">Over-Reactor</Link>
-          </Navbar.Brand>
+          <Navbar.Brand>Over-Reactor</Navbar.Brand>
         </Navbar.Header>
         <Nav>
-          <li role="presentation"><Link {...htmlProps} to="/">Home</Link></li>
-          <li role="presentation"><Link {...htmlProps} to="about">About</Link></li>
+          <IndexLinkContainer {...htmlProps} to="/"><NavItem>Home</NavItem></IndexLinkContainer>
+          <LinkContainer {...htmlProps} to="about"><NavItem>About</NavItem></LinkContainer>
           <NavDropdown title="More" id="basic-nav-dropdown">
-            <li role="menuitem"><Link {...htmlProps} tabIndex={-1} to="counter">Counter</Link></li>
-            <li role="menuitem"><Link {...htmlProps} tabIndex={-1} to="stars">Stars</Link></li>
+            <LinkContainer {...htmlProps} tabIndex={-1} to="counter"><NavItem>Counter</NavItem></LinkContainer>
+            <LinkContainer {...htmlProps} tabIndex={-1} to="stars"><NavItem>Stars</NavItem></LinkContainer>
           </NavDropdown>
         </Nav>
       </Navbar>
